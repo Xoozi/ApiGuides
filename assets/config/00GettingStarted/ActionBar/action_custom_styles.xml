@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item
+    name="Action Custom Styles"
+    type="list" >
+
+    <item
+        name="Custom Background"
+        content="com.xoozi.apiguides.app.ActivityActionBarCustomThemeBackground"
+        type="activity" />
+
+    <item
+        name="Overlay Mode"
+        content="com.xoozi.apiguides.app.ActivityActionBarCustomThemeOverlay"
+        type="activity" />
+
+    <item
+        name="Generated Theme"
+        content="com.xoozi.apiguides.app.ActivityActionBarCustomThemeGo"
+        type="activity" />
+
+</item>

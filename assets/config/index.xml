@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item 
+    name="Api Guides the Android Training"
+    type="dir" >
+    
+
+    <item
+        name="0 Getting Started"
+        content="00GettingStarted"
+        type="dir" />
+
+    <item 
+        name="01 Content Sharing"
+        content="ch01.xml"
+        type="dir" />
+
+    <item 
+        name="02 Multimedia"
+        content="ch02.xml"
+        type="dir" />
+
+    <item 
+        name="03 Graphics"
+        content="ch03.xml"
+        type="dir" />
+
+    <item 
+        name="04 Animation"
+        content="ch04.xml"
+        type="dir" />
+
+    <item 
+        name="05 Connectivity &amp; Cloud"
+        content="ch05.xml"
+        type="dir" />
+
+    <item 
+        name="06 User Info &amp; Location"
+        content="ch06.xml"
+        type="dir" />
+
+
+    <item 
+        name="07 Interaction &amp; Engagement"
+        content="ch07.xml"
+        type="dir" />
+
+    <item 
+        name="07 Interaction &amp;  Engagement"
+        content="ch07.xml"
+        type="dir" />
+
+    <item 
+        name="08 User Interface"
+        content="ch08.xml"
+        type="dir" />
+
+    <item 
+        name="08 User Interface"
+        content="ch08.xml"
+        type="dir" />
+
+    
+    <item 
+        name="09 User Input"
+        content="ch09.xml"
+        type="dir" />
+
+    <item 
+        name="10 Background Jobs"
+        content="ch10.xml"
+        type="dir" />
+
+    <item 
+        name="11 Perfomance"
+        content="ch11.xml"
+        type="dir" />
+
+    <item 
+        name="12 Security &amp; Privacy"
+        content="ch12.xml"
+        type="dir" />
+    
+    <item 
+        name="13 Testing"
+        content="ch13.xml"
+        type="dir" />
+</item>

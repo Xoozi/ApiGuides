@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item 
+    name="Action Bar"
+    type="dir" >
+    
+
+    <item
+        name="Action Bar Mechanics"
+        content="com.xoozi.apiguides.app.ActivityActionBarMechanics"
+        type="activity" />
+
+    <item
+        name="Action Custom Styles"
+        content="action_custom_styles.xml"
+        type="list" />
+
+    <item
+        name="Action Bar Tabs"
+        content="com.xoozi.apiguides.app.ActivityActionBarTabs"
+        type="activity" />
+
+    <item
+        name="Action Bar Usage"
+        content="com.xoozi.apiguides.app.ActivityActionBarUsage"
+        type="activity" />
+
+    <item
+        name="Action Bar Provider"
+        content="action_provider.xml"
+        type="list" />
+
+    <item
+        name="Display Options"
+        content="com.xoozi.apiguides.app.ActivityActionBarDisplayOptions"
+        type="activity" />
+
+    <item
+        name="Split Action Bar"
+        content="com.xoozi.apiguides.app.ActivityActionBarSplit"
+        type="activity" />
+
+    <item
+        name="Drop Down Navigation"
+        content="com.xoozi.apiguides.app.ActivityActionBarDropdownNavigation"
+        type="activity" />
+</item>

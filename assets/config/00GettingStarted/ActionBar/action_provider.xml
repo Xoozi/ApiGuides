@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item
+    name="Action Bar Provider"
+    type="list" >
+
+    <item
+        name="Settings Action Provider"
+        content="com.xoozi.apiguides.app.ActivityActionBarSettingsProvider"
+        type="activity" />
+
+    <item
+        name="Share Action Provider"
+        content="com.xoozi.apiguides.app.ActivityActionBarShareProvider"
+        type="activity" />
+</item>
