@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <item 
-    name="0 Getting Started"
+    name="00 Getting Started"
     type="dir" >
     
 
@@ -8,5 +8,10 @@
         name="Action Bar"
         content="ActionBar"
         type="dir" />
+
+    <item
+        name="Alert Dialogs"
+        content="com.xoozi.apiguides.app.ActivityAlertDialogs"
+        type="activity" />
 
 </item>
