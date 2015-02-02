@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item 
+    name="Views"
+    type="dir" >
+    
+
+    <item
+        name="Drag TextView"
+        content="com.xoozi.apiguides.ui.ActivityDragTextView"
+        type="activity" />
+
+
+</item>

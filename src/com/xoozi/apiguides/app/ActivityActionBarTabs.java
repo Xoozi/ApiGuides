@@ -95,7 +95,7 @@ public class ActivityActionBarTabs extends ActivityBase{
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
 
-            View fragmentView = inflater.inflate(R.layout.filed_action_bar_tab_content, 
+            View fragmentView = inflater.inflate(R.layout.field_action_bar_tab_content, 
                     container, false);
 
             TextView textView = (TextView)fragmentView.findViewById(R.id.text);

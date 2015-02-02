@@ -10,6 +10,11 @@
         type="dir" />
 
     <item
+        name="Activity"
+        content="Activity"
+        type="dir" />
+
+    <item
         name="Alert Dialogs"
         content="com.xoozi.apiguides.app.ActivityAlertDialogs"
         type="activity" />

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item 
+    name="Activity"
+    type="dir" >
+    
+
+    <item
+        name="Animation"
+        content="com.xoozi.apiguides.app.ActivityAnimation"
+        type="activity" />
+
+    <item
+        name="Custom Dialog"
+        content="com.xoozi.apiguides.app.ActivityCustomDialog"
+        type="activity" />
+
+    <item
+        name="Custom Title"
+        content="com.xoozi.apiguides.app.ActivityCustomTitle"
+        type="activity" />
+
+</item>

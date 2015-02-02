@@ -18,6 +18,12 @@
         <item name="android:background">@color/custom_action_bar_theme_color_background</item>
     </style>
 
+    <!-- A theme for a custom dialog appearance.  Here we use an ugly
+         custom frame. -->
+    <style name="Theme.CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/shape_fill_box</item>
+    </style>
+
     <!-- File created by the Android Action Bar Style Generator
 
          Copyright (C) 2011 The Android Open Source Project

@@ -52,12 +52,7 @@
 
     <item 
         name="08 User Interface"
-        content="ch08.xml"
-        type="dir" />
-
-    <item 
-        name="08 User Interface"
-        content="ch08.xml"
+        content="08UserInterface"
         type="dir" />
 
     

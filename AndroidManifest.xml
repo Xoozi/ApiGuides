@@ -85,9 +85,34 @@
         <!-- App/Action Bar END-->
 
 
+
+        <!-- App/Activity -->
+        <activity 
+            android:name=".app.ActivityAnimation"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivityCustomDialog"
+            android:theme="@style/Theme.CustomDialog"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivityCustomTitle"
+            android:theme="@android:style/Theme"
+            android:label="@string/app_name"/>
+
+        <!-- App/Activity END-->
+
         <activity 
             android:name=".app.ActivityAlertDialogs"
             android:label="@string/app_name"/>
 
+        <!-- User Interface -->
+
+        <activity 
+            android:name=".ui.ActivityDragTextView"
+            android:label="@string/app_name"/>
+
+        <!-- User Interface END-->
     </application>
 </manifest>
