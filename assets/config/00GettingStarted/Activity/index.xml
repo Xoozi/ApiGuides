@@ -19,4 +19,49 @@
         content="com.xoozi.apiguides.app.ActivityCustomTitle"
         type="activity" />
 
+    <item
+        name="Forwarding"
+        content="com.xoozi.apiguides.app.ActivityForwarding"
+        type="activity" />
+    
+    <item
+        name="gg Intent Activity Flags"
+        content="com.xoozi.apiguides.app.ActivityIntentFlags"
+        type="activity" />
+
+    <item
+        name="Intent Chooser"
+        content="com.xoozi.apiguides.app.ActivityIntentChooser"
+        type="activity" />
+
+    <item
+        name="Persistent State"
+        content="com.xoozi.apiguides.app.ActivityPersistentState"
+        type="activity" />
+
+    <item
+        name="Finish Affinity"
+        content="com.xoozi.apiguides.app.ActivityFinishAffinity"
+        type="activity" />
+
+    <item
+        name="gg Presentation"
+        content="com.xoozi.apiguides.app.ActivityPresentation"
+        type="activity" />
+
+    <item
+        name="gg Presentation Media Router"
+        content="com.xoozi.apiguides.app.ActivityPresentationMediaRouter"
+        type="activity" />
+
+    <item
+        name="gg QuickContacts"
+        content="com.xoozi.apiguides.app.ActivityQuickContacts"
+        type="activity" />
+
+    <item
+        name="cc Receive Result"
+        content="com.xoozi.apiguides.app.ActivityReceiveResult"
+        type="activity" />
+
 </item>

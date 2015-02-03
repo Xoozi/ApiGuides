@@ -101,6 +101,27 @@
             android:theme="@android:style/Theme"
             android:label="@string/app_name"/>
 
+        <activity 
+            android:name=".app.ActivityForwarding"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivityForwardingTarget"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivityIntentChooser"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivityPersistentState"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivityFinishAffinity"
+            android:taskAffinity=":finishing"
+            android:label="@string/app_name"/>
+
         <!-- App/Activity END-->
 
         <activity 

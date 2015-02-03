@@ -46,4 +46,14 @@
     <string name="custom_title_right">Right is always right</string>
     <string name="custom_title_left_button">Change Left</string>
     <string name="custom_title_right_button">Change Right</string>
+
+    <string name="forwarding">Press the button to go forward to the next activity.  This activity will stop, so you will no longer see it when going back.</string>
+    <string name="go">Go</string>
+    <string name="forward_target">Press back button and notice we don\'t see the previous activity.</string>
+
+    <string name="save_restore_msg">Demonstration of saving and restoring activity state in onSaveInstanceState() and onCreate().</string>
+    <string name="saves_state">This text field saves its state:</string>
+    <string name="no_saves_state">This text field does not save its state:</string>
+    <string name="initial_text">Initial text.</string>
+    <string name="persistent_msg">Demonstration of persistent activity state with getPreferences(0).edit() and getPreferences(0).</string>
 </resources>
