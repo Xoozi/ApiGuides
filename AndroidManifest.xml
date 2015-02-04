@@ -122,6 +122,59 @@
             android:taskAffinity=":finishing"
             android:label="@string/app_name"/>
 
+        <activity 
+            android:name=".app.ActivityRecreate"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivityReorderLaunch"
+            android:label="@string/app_name"/>
+        <activity 
+            android:name=".app.ActivityReorderTwo"
+            android:label="@string/app_name"/>
+        <activity 
+            android:name=".app.ActivityReorderThree"
+            android:label="@string/app_name"/>
+        <activity 
+            android:name=".app.ActivityReorderFour"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivitySaveRestoreState"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivityScreenOrientation"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivitySecureDialog"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivitySecureWindow"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivitySecureSurface"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivitySetWallpaper"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".app.ActivitySoftInputMode"
+            android:label="@string/app_name"/>
+
+        <activity android:name=".app.ActivityTranslucent"
+                android:theme="@style/Theme.Translucent"
+                android:label="@string/app_name"/>
+
+        <activity android:name=".app.ActivityTranslucentBlur"
+                android:theme="@style/Theme.Transparent"
+                android:label="@string/app_name"/>
+
         <!-- App/Activity END-->
 
         <activity 

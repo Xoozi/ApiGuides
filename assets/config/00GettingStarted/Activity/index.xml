@@ -64,4 +64,55 @@
         content="com.xoozi.apiguides.app.ActivityReceiveResult"
         type="activity" />
 
+
+    <item
+        name="Recreate"
+        content="com.xoozi.apiguides.app.ActivityRecreate"
+        type="activity" />
+
+    <item
+        name="cc Redirect"
+        content="com.xoozi.apiguides.app.ActivityRedirect"
+        type="activity" />
+
+    <item
+        name="Reorder"
+        content="com.xoozi.apiguides.app.ActivityReorderLaunch"
+        type="activity" />
+
+    <item
+        name="Save Restore State"
+        content="com.xoozi.apiguides.app.ActivitySaveRestoreState"
+        type="activity" />
+
+    <item
+        name="ScreenOrientaions"
+        content="com.xoozi.apiguides.app.ActivityScreenOrientation"
+        type="activity" />
+    
+    <item
+        name="Secure Surfaces"
+        content="SecureSurfaces"
+        type="dir" />
+
+
+    <item
+        name="Set Wallpaper"
+        content="com.xoozi.apiguides.app.ActivitySetWallpaper"
+        type="activity" />
+
+    <item
+        name="Soft Input Mode"
+        content="com.xoozi.apiguides.app.ActivitySoftInputMode"
+        type="activity" />
+
+    <item
+        name="Translucent"
+        content="com.xoozi.apiguides.app.ActivityTranslucent"
+        type="activity" />
+
+    <item
+        name="Translucent Blur"
+        content="com.xoozi.apiguides.app.ActivityTranslucentBlur"
+        type="activity" />
 </item>
