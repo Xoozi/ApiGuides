@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item 
+    name="Secure Surfaces"
+    type="dir" >
+    
+
+    <item
+        name="Secure Dialog"
+        content="com.xoozi.apiguides.app.ActivitySecureDialog"
+        type="activity" />
+
+    <item
+        name="Secure Surface View"
+        content="com.xoozi.apiguides.app.ActivitySecureSurfaceView"
+        type="activity" />
+
+    <item
+        name="Secure Window"
+        content="com.xoozi.apiguides.app.ActivitySecureWindow"
+        type="activity" />
+</item>
