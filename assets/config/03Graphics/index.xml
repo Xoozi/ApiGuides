@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item 
+    name="03 Graphics"
+    type="dir" >
+    
+
+    <item
+        name="AlphaBitmap"
+        content="com.xoozi.apiguides.graphics.ActivityAlphaBitmap"
+        type="activity" />
+
+    <item
+        name="Animate Drawables"
+        content="com.xoozi.apiguides.graphics.ActivityAnimateDrawables"
+        type="activity" />
+
+    <item
+        name="Arcs"
+        content="com.xoozi.apiguides.graphics.ActivityArcs"
+        type="activity" />
+
+</item>
