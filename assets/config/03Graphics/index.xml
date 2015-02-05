@@ -19,4 +19,9 @@
         content="com.xoozi.apiguides.graphics.ActivityArcs"
         type="activity" />
 
+    <item
+        name="Awesome"
+        content="com.xoozi.apiguides.graphics.ActivityAwesome"
+        type="activity" />
+
 </item>

@@ -194,6 +194,10 @@
             android:name=".graphics.ActivityArcs"
             android:label="@string/app_name"/>
 
+        <activity 
+            android:name=".graphics.ActivityAwesome"
+            android:label="@string/app_name"/>
+
         <!-- Graphics END -->
 
         <!-- User Interface -->
