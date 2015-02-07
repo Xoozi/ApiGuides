@@ -24,4 +24,9 @@
         content="com.xoozi.apiguides.graphics.ActivityAwesome"
         type="activity" />
 
+    <item
+        name="Bitmap Decode"
+        content="com.xoozi.apiguides.graphics.ActivityBitmapDecode"
+        type="activity" />
+
 </item>
