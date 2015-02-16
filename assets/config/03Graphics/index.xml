@@ -29,4 +29,14 @@
         content="com.xoozi.apiguides.graphics.ActivityBitmapDecode"
         type="activity" />
 
+    <item
+        name="Bitmap Mesh"
+        content="com.xoozi.apiguides.graphics.ActivityBitmapMesh"
+        type="activity" />
+
+    <item
+        name="Clipping"
+        content="com.xoozi.apiguides.graphics.ActivityClipping"
+        type="activity" />
+
 </item>

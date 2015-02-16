@@ -203,6 +203,14 @@
             android:hardwareAccelerated="false"
             android:name=".graphics.ActivityBitmapDecode"
             android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".graphics.ActivityBitmapMesh"
+            android:label="@string/app_name"/>
+
+        <activity 
+            android:name=".graphics.ActivityClipping"
+            android:label="@string/app_name"/>
         <!-- Graphics END -->
 
         <!-- User Interface -->
