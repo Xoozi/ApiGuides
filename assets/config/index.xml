@@ -80,4 +80,9 @@
         name="13 Testing"
         content="ch13.xml"
         type="dir" />
+
+    <item 
+        name="20 Sensor"
+        content="20Sensor"
+        type="dir" />
 </item>

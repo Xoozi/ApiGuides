@@ -24,6 +24,13 @@
         <item name="android:windowBackground">@drawable/shape_fill_box</item>
     </style>
 
+	<style name="line_separator">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">2dip</item>
+		<item name="android:color">#F2F2F2</item>
+		<item name="android:background">#F2F2F2</item>
+	</style>
+
     <!-- File created by the Android Action Bar Style Generator
 
          Copyright (C) 2011 The Android Open Source Project

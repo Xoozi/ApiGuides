@@ -47,4 +47,19 @@
         <item>REVERSE_PORTRAIT</item>
         <item>FULL_SENSOR</item>
     </string-array>
+
+    <string-array name="sensor_type">
+        <item>ACCELEROMETER     </item>
+        <item>MAGNETIC_FIELD    </item>
+        <item>ORIENTATION       </item>
+        <item>GYROSCOPE         </item>
+        <item>LIGHT             </item>
+        <item>PRESSURE          </item>
+        <item>TEMPERATURE       </item>
+        <item>PROXIMITY         </item>
+        <item>GRAVITY           </item>
+        <item>LINEAR_ACCELERATION</item>
+        <item>ROTATION_VECTOR   </item>
+        <item>RELATIVE_HUMIDITY </item>
+    </string-array>
 </resources>

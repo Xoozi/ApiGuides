@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item 
+    name="20 Sensor"
+    type="dir" >
+    
+    <item
+        name="Sensor List"
+        content="com.xoozi.apiguides.sensor.ActivitySensorList"
+        type="activity" />
+
+    <item
+        name="Sensor Rotation acc"
+        content="com.xoozi.apiguides.sensor.ActivitySensorRotation"
+        type="activity" />
+
+    <item
+        name="Step measure"
+        content="com.xoozi.apiguides.sensor.ActivityStepMeasure"
+        type="activity" />
+</item>

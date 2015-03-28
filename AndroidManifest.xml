@@ -220,5 +220,20 @@
             android:label="@string/app_name"/>
 
         <!-- User Interface END-->
+
+        <!-- Sensor -->
+        <activity 
+            android:name=".sensor.ActivitySensorList"
+            android:label="@string/app_name"/>
+        <activity 
+            android:name=".sensor.ActivitySensorDetail"
+            android:label="@string/app_name"/>
+        <activity 
+            android:name=".sensor.ActivitySensorRotation"
+            android:label="@string/app_name"/>
+        <activity 
+            android:name=".sensor.ActivityStepMeasure"
+            android:label=""/>
+        <!-- Sensor END -->
     </application>
 </manifest>
