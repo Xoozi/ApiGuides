@@ -1,14 +1,17 @@
 package com.xoozi.apiguides.ui;
 
 import android.os.Bundle;
+import android.view.ViewGroup;
 
 import com.xoozi.apiguides.ActivityBase;
 import com.xoozi.apiguides.R;
+import com.xoozi.apiguides.ui.views.DragLayout;
 import com.xoozi.apiguides.ui.views.DragTextView;
 
 public class ActivityDragTextView extends ActivityBase{
 
     DragTextView    _dragText;
+    DragLayout      _dragLayout;
     int[]           _layout;
 
     @Override
@@ -17,6 +20,10 @@ public class ActivityDragTextView extends ActivityBase{
         setContentView(R.layout.activity_drag_textview);
 
         _dragText = (DragTextView) findViewById(R.id.drag_text);
+
+        ViewGroup screen = (ViewGroup) findViewById(R.id.screen); 
+        _dragLayout = new DragLayout(this, R.layout.field_drag_layout);
+        screen.addView(_dragLayout);
     }
 
     @Override
