@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item 
+    name="new BLE"
+    type="dir" >
+    
+    <item
+        name="BLE"
+        content="com.xoozi.apiguides.ble.ActivityBle"
+        type="activity" />
+</item>

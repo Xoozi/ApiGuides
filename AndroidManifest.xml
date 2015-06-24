@@ -15,6 +15,9 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.NFC" />
 
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
     <!-- For android.media.audiofx.Visualizer -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
@@ -235,5 +238,37 @@
             android:name=".sensor.ActivityStepMeasure"
             android:label=""/>
         <!-- Sensor END -->
+
+
+        <!-- Ble -->
+
+        <activity 
+            android:name=".ble.ActivityBle"
+            android:label=""/>
+        <!-- Ble -->
+
+
+        <!-- opengl -->
+
+        <activity 
+            android:name=".gl.ActivityARGL"
+            android:label=""/>
+        <activity 
+            android:name=".gl.ActivityGL2_1_HelloTriangle"
+            android:label=""/>
+        <activity 
+            android:name=".gl.ActivityGLES_CB_1_Triangle"
+            android:label=""/>
+        <activity 
+            android:name=".gl.ActivityGLES_CB_2_Cube"
+            android:label=""/>
+        <activity 
+            android:name=".gl.ActivityGLES_CB_2_2_Cube_Index"
+            android:label=""/>
+        <activity 
+            android:name=".gl.ActivityGLES_CB_2_3_Cube_VBO"
+            android:label=""/>
+        <!-- opengl -->
+
     </application>
 </manifest>

@@ -2,7 +2,16 @@
 <item 
     name="Api Guides the Android Training"
     type="dir" >
+    <item
+        name="gl"
+        content="gl"
+        type="dir" />
     
+    <item
+        name="new BLE"
+        content="BLE"
+        type="dir" />
+
 
     <item
         name="00 Getting Started"

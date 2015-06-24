@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item 
+    name="1. Start"
+    type="dir" >
+
+    <item
+        name="ARGL"
+        content="com.xoozi.apiguides.gl.ActivityARGL"
+        type="activity" />
+    <item
+        name="Hello Triangle"
+        content="com.xoozi.apiguides.gl.ActivityGL2_1_HelloTriangle"
+        type="activity" />
+    <item
+        name="CB 1 Triangle"
+        content="com.xoozi.apiguides.gl.ActivityGLES_CB_1_Triangle"
+        type="activity" />
+</item>
