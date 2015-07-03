@@ -1,6 +1,7 @@
 package com.xoozi.apiguides.gl.glutil;
 
 import static  android.util.FloatMath.sqrt;
+import static android.opengl.Matrix.multiplyMV;
 /**
  * 一些几何工具
  */
@@ -145,11 +146,27 @@ public class Geometry{
                         z*z);
         }
 
+        public Vector multiplyMatrix(float[] matrix){
+            float [] v = new float[4];
+            float [] ret = new float[4];
+            v[0] = x;
+            v[1] = y;
+            v[2] = z;
+            v[3] = 1;
+
+            multiplyMV(ret, 0, matrix, 0, v, 0);
+            return new Vector(ret[0], ret[1], ret[2]);
+        }
+
         public Vector crossProduct(Vector other){
             return new Vector(
                     (y*other.z) - (z*other.y),
                     (z*other.x) - (x*other.z),
                     (x*other.y) - (y*other.x));
+        }
+
+        public Vector add(Vector other){
+            return new Vector(x+other.x, y+other.y, z+other.z);
         }
 
         public float  dotProduct(Vector other){

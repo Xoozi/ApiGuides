@@ -10,5 +10,10 @@
         name="2. OpenGE ES3.0 Essentials"
         content="2_Essentials"
         type="dir" />
+
+    <item
+        name="3. New Features of OpenGL ES 3.0"
+        content="3_NewFeatures"
+        type="dir" />
     
 </item>

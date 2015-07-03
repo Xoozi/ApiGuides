@@ -268,6 +268,14 @@
         <activity 
             android:name=".gl.ActivityGLES_CB_2_3_Cube_VBO"
             android:label=""/>
+
+        <activity 
+            android:name=".gl.ActivityGLES_CB_2_4_DepthTesting"
+            android:label=""/>
+
+        <activity 
+            android:name=".gl.ActivityGLES_CB_3_UBO"
+            android:label=""/>
         <!-- opengl -->
 
     </application>

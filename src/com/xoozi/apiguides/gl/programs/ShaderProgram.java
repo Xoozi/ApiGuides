@@ -47,7 +47,19 @@ public abstract class ShaderProgram{
             glUseProgram(_program);
     }
 
+    public int getProgram(){
+        return _program;
+    }
+
     public boolean isValid(){
         return _valid;
+    }
+
+    public int getPositionAttributeLocation(){
+        return 0;
+    }
+
+    public int getColorAttributeLocation(){
+        return 0;
     }
 }

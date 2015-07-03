@@ -9,21 +9,11 @@ import static android.opengl.GLES30.glDrawElements;
 
 import com.xoozi.apiguides.gl.data.IndexBuffer;
 import com.xoozi.apiguides.gl.data.VertexBuffer;
-import com.xoozi.apiguides.gl.programs.CB_2_ShaderProgram;
+import com.xoozi.apiguides.gl.programs.ShaderProgram;
 
 public class DiceVBO {
     private static final int POSITION_COMPONENT_COUNT = 3;
 
-    private final float[] _vertices = new float[] { -0.5f, -0.5f, 0.5f, //v0
-            -0.5f, 0.5f, 0.5f, //v1
-            0.5f, 0.5f, 0.5f, //v2
-            0.5f, -0.5f, 0.5f, //v3
-
-            -0.5f, -0.5f, -0.5f, //v4
-            -0.5f, 0.5f, -0.5f, //v5
-            0.5f, 0.5f, -0.5f, //v6
-            0.5f, -0.5f, -0.5f, //v7
-    };
     private final float[] _colors = new float[] { 0, 0, 0, //v0
             0, 0, 1, //v1
             0, 1, 0, //v2
@@ -37,6 +27,7 @@ public class DiceVBO {
     private final short[] _indices = new short[] { 0, 3, 1, 3, 2, 1, 7, 4, 6,
             4, 5, 6, 4, 0, 5, 0, 1, 5, 3, 7, 2, 7, 6, 2, 1, 2, 5, 2, 6, 5, 3,
             0, 7, 0, 4, 7 };
+    private final float[] _vertices;
 
     private final VertexBuffer  _vertexBuffer;
     private final VertexBuffer  _colorBuffer;
@@ -44,6 +35,17 @@ public class DiceVBO {
 
 
     public DiceVBO(float size){
+        _vertices = new float[] { 
+            -size, -size, size, //v0
+            -size, size, size, //v1
+            size, size, size, //v2
+            size, -size, size, //v3
+
+            -size, -size, -size, //v4
+            -size, size, -size, //v5
+            size, size, -size, //v6
+            size, -size, -size, //v7
+    };
         _vertexBuffer = new VertexBuffer(_vertices);
 
         _colorBuffer  = new VertexBuffer(_colors);
@@ -51,7 +53,7 @@ public class DiceVBO {
         _indexBuffer  = new IndexBuffer(_indices);
     }
 
-    public void bindData(CB_2_ShaderProgram colorProgram){
+    public void bindData(ShaderProgram colorProgram){
         _vertexBuffer.setVertexAttribPointer(0, colorProgram.getPositionAttributeLocation(),
                                             POSITION_COMPONENT_COUNT, 0);
         _colorBuffer.setVertexAttribPointer(0, colorProgram.getColorAttributeLocation(),
