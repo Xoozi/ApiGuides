@@ -11,7 +11,7 @@ import com.xoozi.apiguides.gl.data.IndexBuffer;
 import com.xoozi.apiguides.gl.data.VertexBuffer;
 import com.xoozi.apiguides.gl.programs.ShaderProgram;
 
-public class DiceVBO {
+public class DicePriRestart {
     private static final int POSITION_COMPONENT_COUNT = 3;
 
     private final float[] _colors = new float[] { 0, 0, 0, //v0
@@ -28,17 +28,17 @@ public class DiceVBO {
             0, 3, 1,    3, 2, 1, 
             7, 4, 6,    4, 5, 6, 
             4, 0, 5,    0, 1, 5, 
+            (short) 65535, //利用索引Max值来重启图元绘制
             3, 7, 2,    7, 6, 2, 
             1, 2, 5,    2, 6, 5, 
-            3, 0, 7,     0, 4, 7 };
+            3, 0, 7,    0, 4, 7 };
     private final float[] _vertices;
 
-    private final VertexBuffer  _vertexBuffer;
-    private final VertexBuffer  _colorBuffer;
-    private final IndexBuffer   _indexBuffer;
+    private final VertexBuffer _vertexBuffer;
+    private final VertexBuffer _colorBuffer;
+    private final IndexBuffer _indexBuffer;
 
-
-    public DiceVBO(float size){
+    public DicePriRestart(float size){
         _vertices = new float[] { 
             -size, -size, size, //v0
             -size, size, size, //v1
@@ -66,7 +66,8 @@ public class DiceVBO {
 
     public void draw(){
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBuffer.getBufferId());
-        glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, 0);
+        glDrawElements(GL_TRIANGLES, 36+1, //注意这里的+1
+                GL_UNSIGNED_SHORT, 0);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     }
 }

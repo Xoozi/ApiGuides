@@ -5,6 +5,22 @@
 
     <item
         name="CB 3 Uniform Block Object"
-        content="com.xoozi.apiguides.gl.ActivityGLES_CB_3_UBO"
+        content="com.xoozi.apiguides.gl.ActivityGLES_CB_3_1_UBO"
         type="activity" />
+
+    <item
+        name="CB 3 Veterx Array Object"
+        content="com.xoozi.apiguides.gl.ActivityGLES_CB_3_2_VAO"
+        type="activity" />
+
+    <item
+        name="CB 3 Geometry Instancing"
+        content="com.xoozi.apiguides.gl.ActivityGLES_CB_3_3_Geometry_Instancing"
+        type="activity" />
+
+    <item
+        name="CB 3 Primitive Restart"
+        content="com.xoozi.apiguides.gl.ActivityGLES_CB_3_4_Primitive_Restart"
+        type="activity" />
+
 </item>

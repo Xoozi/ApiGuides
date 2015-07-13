@@ -18,6 +18,7 @@ public abstract class ShaderProgram{
     protected static final String U_TIME                = "u_Time";
 
     // Attribute constants
+    protected static final String A_MATRIX              = "a_Matrix";
     protected static final String A_DIRECTION_VECTOR    = "a_DirectionVector";
     protected static final String A_PARTICLE_START_TIME = "a_ParticleStartTime";
     protected static final String A_POSITION            = "a_Position";
@@ -60,6 +61,10 @@ public abstract class ShaderProgram{
     }
 
     public int getColorAttributeLocation(){
+        return 0;
+    }
+
+    public int getMatrixAttributeLocation(){
         return 0;
     }
 }

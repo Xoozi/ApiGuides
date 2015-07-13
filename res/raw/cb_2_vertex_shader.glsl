@@ -1,7 +1,6 @@
 #version 300 es
 uniform     mat4    u_Matrix;
-in   vec4    a_Position;
-
+in          vec4    a_Position;
 in          vec4    a_Color;
 
 

@@ -274,7 +274,18 @@
             android:label=""/>
 
         <activity 
-            android:name=".gl.ActivityGLES_CB_3_UBO"
+            android:name=".gl.ActivityGLES_CB_3_1_UBO"
+            android:label=""/>
+        <activity 
+            android:name=".gl.ActivityGLES_CB_3_2_VAO"
+            android:label=""/>
+
+        <activity 
+            android:name=".gl.ActivityGLES_CB_3_3_Geometry_Instancing"
+            android:label=""/>
+
+        <activity 
+            android:name=".gl.ActivityGLES_CB_3_4_Primitive_Restart"
             android:label=""/>
         <!-- opengl -->
 

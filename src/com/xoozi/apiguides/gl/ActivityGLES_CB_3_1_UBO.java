@@ -30,11 +30,12 @@ import android.hardware.SensorManager;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.opengl.GLSurfaceView.Renderer;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 
-public class ActivityGLES_CB_3_UBO extends Activity implements
+public class ActivityGLES_CB_3_1_UBO extends Activity implements
         SensorEventListener, OnTouchListener {
     private Sensor _rotationVectorSensor;
     private SensorManager _sensorManager;
@@ -47,14 +48,11 @@ public class ActivityGLES_CB_3_UBO extends Activity implements
     private final float[] _viewMatrix = new float[16];
     private final float[] _rotationMatrix = new float[16];
 
-    private final float[] _dummyMatrix = new float[16];
-
     private DiceVBO _dice;
-
 
     private Vector _pos = new Vector(-4, 1, 1);
     private boolean _toggle = true;
-    private int     _transformationFlag = 0;
+    private int _transformationFlag = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -93,8 +91,7 @@ public class ActivityGLES_CB_3_UBO extends Activity implements
         perspectiveM(_projectionMatrix, 0, 45, (float) width / (float) height,
                 1f, 10f);
 
-        setLookAtM(_viewMatrix, 0,
-        2f, 2f, 2f, //eyeX, eyeY, eyeZ
+        setLookAtM(_viewMatrix, 0, 2f, 2f, 2f, //eyeX, eyeY, eyeZ
                 //0f, 1.2f, 2.2f, //eyeX, eyeY, eyeZ
                 //0f, 1.2f, 0f, //eyeX, eyeY, eyeZ
                 0f, 0f, 0f, //centerX, centerY, centerZ
@@ -119,9 +116,9 @@ public class ActivityGLES_CB_3_UBO extends Activity implements
 
         _toggle = !_toggle;
 
-        if(0 == _transformationFlag){
+        if (0 == _transformationFlag) {
             _transformationFlag = 1;
-        }else{
+        } else {
             _transformationFlag = 0;
         }
     }
@@ -170,15 +167,14 @@ public class ActivityGLES_CB_3_UBO extends Activity implements
             _colorShaderProgram.useProgram();
             _colorShaderProgram.setTransformationFlag(_transformationFlag);
 
-            if(0 ==_transformationFlag){
+            if (0 == _transformationFlag) {
+                Log.w("wtf", "transformation use uniforms");
                 _colorShaderProgram.setUniforms(_modelMatrix, _viewMatrix,
                         _rotationMatrix, _projectionMatrix);
-            }else{
-                _colorShaderProgram.updateMatrices(
-                        _dummyMatrix, _dummyMatrix,
-                        _dummyMatrix, _dummyMatrix);
-                        /*_modelMatrix, _viewMatrix, 
-                        _rotationMatrix, _projectionMatrix);*/
+            } else {
+                Log.w("wtf", "transformation use ubo");
+                _colorShaderProgram.updateMatrices(_modelMatrix, _viewMatrix,
+                        _rotationMatrix, _projectionMatrix);
             }
             _dice.bindData(_colorShaderProgram);
             _dice.draw();
@@ -194,9 +190,8 @@ public class ActivityGLES_CB_3_UBO extends Activity implements
         public void onSurfaceCreated(GL10 gl, EGLConfig config) {
             glClearColor(0, 0.1f, 0.1f, 1);
             _colorShaderProgram = new CB_3_UBO_ShaderProgram(
-                    ActivityGLES_CB_3_UBO.this);
+                    ActivityGLES_CB_3_1_UBO.this);
 
-            setIdentityM(_dummyMatrix, 0);
             setIdentityM(_rotationMatrix, 0);
             _dice = new DiceVBO(0.5f);
         }
