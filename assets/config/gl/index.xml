@@ -15,5 +15,9 @@
         name="3. New Features of OpenGL ES 3.0"
         content="3_NewFeatures"
         type="dir" />
+    <item
+        name="5. Material and Light"
+        content="5_Material_and_Light"
+        type="dir" />
     
 </item>

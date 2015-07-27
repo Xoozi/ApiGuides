@@ -287,6 +287,10 @@
         <activity 
             android:name=".gl.ActivityGLES_CB_3_4_Primitive_Restart"
             android:label=""/>
+
+        <activity 
+            android:name=".gl.ActivityGLES_CB_5_1_PerVertex_Ambient"
+            android:label=""/>
         <!-- opengl -->
 
     </application>

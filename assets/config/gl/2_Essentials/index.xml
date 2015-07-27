@@ -24,6 +24,6 @@
 
     <item
         name="CB 3 Uniform Block Object"
-        content="com.xoozi.apiguides.gl.ActivityGLES_CB_3_UBO"
+        content="com.xoozi.apiguides.gl.ActivityGLES_CB_3_1_UBO"
         type="activity" />
 </item>

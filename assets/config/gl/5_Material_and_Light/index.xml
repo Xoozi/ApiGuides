@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item 
+    name="5. Material and Light"
+    type="dir" >
+
+    <item
+        name="Per Vertex ambient Shader"
+        content="com.xoozi.apiguides.gl.ActivityGLES_CB_5_1_PerVertex_Ambient"
+        type="activity" />
+
+</item>
