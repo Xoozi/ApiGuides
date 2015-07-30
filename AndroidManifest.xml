@@ -291,6 +291,10 @@
         <activity 
             android:name=".gl.ActivityGLES_CB_5_1_PerVertex_Ambient"
             android:label=""/>
+
+        <activity 
+            android:name=".gl.ActivityGLES_CB_5_2_PerVertex_Diffuse"
+            android:label=""/>
         <!-- opengl -->
 
     </application>

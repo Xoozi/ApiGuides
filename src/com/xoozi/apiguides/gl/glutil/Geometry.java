@@ -164,6 +164,9 @@ public class Geometry{
                     (z*other.x) - (x*other.z),
                     (x*other.y) - (y*other.x));
         }
+        public Vector normalize(){
+            return scale(1f / length());
+        }
 
         public Vector add(Vector other){
             return new Vector(x+other.x, y+other.y, z+other.z);
@@ -173,6 +176,10 @@ public class Geometry{
             return x * other.x
                 + y * other.y
                 + z * other.z;
+        }
+
+        public Vector sub(Vector other){
+            return new Vector(x-other.x, y-other.y, z-other.z);
         }
 
         public Vector scale(float f){

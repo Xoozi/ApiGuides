@@ -7,5 +7,9 @@
         name="Per Vertex ambient Shader"
         content="com.xoozi.apiguides.gl.ActivityGLES_CB_5_1_PerVertex_Ambient"
         type="activity" />
+    <item
+        name="Per Vertex diffuse Shader"
+        content="com.xoozi.apiguides.gl.ActivityGLES_CB_5_2_PerVertex_Diffuse"
+        type="activity" />
 
 </item>

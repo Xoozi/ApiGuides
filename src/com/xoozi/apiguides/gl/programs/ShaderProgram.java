@@ -67,4 +67,7 @@ public abstract class ShaderProgram{
     public int getMatrixAttributeLocation(){
         return 0;
     }
+    public int getNormalAttributeLocation(){
+        return 0;
+    }
 }
