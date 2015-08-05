@@ -5,8 +5,10 @@ import javax.microedition.khronos.opengles.GL10;
 
 import com.xoozi.apiguides.R;
 import com.xoozi.apiguides.gl.glutil.Geometry.Vector;
+import com.xoozi.apiguides.gl.objects.LightPoint;
 import com.xoozi.apiguides.gl.objects.PerlinTide;
 import com.xoozi.apiguides.gl.programs.CB_5_Perv_Diffuse_ShaderProgram;
+import com.xoozi.apiguides.gl.programs.ColorShaderProgram;
 import com.xoozi.apiguides.gl.programs.RayShaderProgram;
 
 import static android.opengl.GLES30.GL_COLOR_BUFFER_BIT;
@@ -48,6 +50,7 @@ public class ActivityGLES_CB_5_2_PerVertex_Diffuse extends Activity implements
     private GLSurfaceView _glSurfaceView;
     private CB_5_Perv_Diffuse_ShaderProgram _diffuseShaderProgram;
     private RayShaderProgram                _rayShaderProgram;
+    private ColorShaderProgram              _colorShaderProgram;
 
     private final float[] _modelMatrix = new float[16];
     private final float[] _projectionMatrix = new float[16];
@@ -60,6 +63,13 @@ public class ActivityGLES_CB_5_2_PerVertex_Diffuse extends Activity implements
     private final float[] _RRMatrix = new float[16];
 
     private PerlinTide    _tide;
+    private LightPoint    _lightPoint;
+    private float         _radius = 200;
+    private float         _theta = 0;
+    private float         _step = (float)(Math.PI/60);
+    private float         _heightMax = 300;
+    private float         _heightMini = 200;
+    private float         _heightStep = 2;
 
     private Vector _eye = new Vector(0, 0, 200);
     private Vector _center;
@@ -72,6 +82,7 @@ public class ActivityGLES_CB_5_2_PerVertex_Diffuse extends Activity implements
     private MyGestureListener _gestureListener = new MyGestureListener();
     private boolean     _drawNormal = false;
     private boolean     _drawLines  = false;
+    private int         _lightMode = 0x111;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -93,6 +104,7 @@ public class ActivityGLES_CB_5_2_PerVertex_Diffuse extends Activity implements
         _detector = new GestureDetector(this, _gestureListener);
         _detector.setOnDoubleTapListener(_gestureListener);
         _detector.setIsLongpressEnabled(true);
+
     }
 
     @Override
@@ -129,12 +141,40 @@ public class ActivityGLES_CB_5_2_PerVertex_Diffuse extends Activity implements
                 _drawLines = !_drawLines;
                 break;
             }
+
+            case R.id.action_ambient:
+                _lightMode ^= 0x1;
+            break;
+
+            case R.id.action_direct_diffuse:
+                _lightMode ^= 0x10;
+            break;
+
+            case R.id.action_point_diffuse:
+                _lightMode ^= 0x100;
+            break;
         }
         return true;
     }
 
     private void _adjCenter() {
         _center = new Vector(0f, _eye.y, _eye.z - 100);
+    }
+
+    private void _updateLightPos(){
+        _theta += _step;
+        
+        float x = (float)(Math.sin(_theta) * _radius);
+        float z = (float)(Math.cos(_theta) * _radius);
+        float y = _lightPoint.getY() + _heightStep;
+        if(y > _heightMax ||
+                y < _heightMini){
+            _heightStep *= -1;
+        }
+        _lightPoint.setX(x);
+        _lightPoint.setY(y);
+        _lightPoint.setZ(z);
+        _lightPoint.update();
     }
 
     /**
@@ -228,11 +268,16 @@ public class ActivityGLES_CB_5_2_PerVertex_Diffuse extends Activity implements
 
             _handleMove();
 
+            _updateLightPos();
+
             _positionObjectInScene(_pos.x, _pos.y, _pos.z);
             _diffuseShaderProgram.useProgram();
             _diffuseShaderProgram.setMatrix(_MVPMatrix);
             _diffuseShaderProgram.setMaterial(0.204f, 0.455f, 0.549f);
             _diffuseShaderProgram.setLightAmbient(1, 1, 1);
+            _diffuseShaderProgram.setLightPosition(_lightPoint.getX(), _lightPoint.getY(), _lightPoint.getZ());
+            _diffuseShaderProgram.setLightMode(_lightMode);
+
             _tide.update();
             _tide.bindData(_diffuseShaderProgram);
             _tide.draw(_drawLines);
@@ -243,6 +288,11 @@ public class ActivityGLES_CB_5_2_PerVertex_Diffuse extends Activity implements
                 _rayShaderProgram.setUniforms(_MVPMatrix, 1f, 1f, 0f, 0f);
                 _tide.drawNormal(_rayShaderProgram);
             }
+
+            _colorShaderProgram.useProgram();
+            _colorShaderProgram.setUniforms(_MVPMatrix, 1f, 1f, 1f, 1f);
+            _lightPoint.bindData(_colorShaderProgram);
+            _lightPoint.draw();
         }
 
         @Override
@@ -260,9 +310,12 @@ public class ActivityGLES_CB_5_2_PerVertex_Diffuse extends Activity implements
                     ActivityGLES_CB_5_2_PerVertex_Diffuse.this);
             _rayShaderProgram = new RayShaderProgram(
                     ActivityGLES_CB_5_2_PerVertex_Diffuse.this);
+            _colorShaderProgram = new ColorShaderProgram(
+                    ActivityGLES_CB_5_2_PerVertex_Diffuse.this);
 
             setIdentityM(_rotationMatrix, 0);
-            _tide = new PerlinTide(100, 100, 5, 200);
+            _tide = new PerlinTide(100, 100, 5, 120);
+            _lightPoint = new LightPoint(0, 200, 0);
         }
     }
 

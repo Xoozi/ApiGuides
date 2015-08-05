@@ -12,6 +12,7 @@ import com.xoozi.apiguides.gl.glutil.Geometry.Cube;
 import com.xoozi.apiguides.gl.glutil.Geometry.Cylinder;
 import com.xoozi.apiguides.gl.glutil.Geometry.Point;
 import com.xoozi.apiguides.gl.glutil.Geometry.Ray;
+import com.xoozi.apiguides.gl.glutil.Geometry.Vector;
 
 import static android.opengl.GLES30.GL_POINTS;
 import static android.opengl.GLES30.GL_LINES;
@@ -30,6 +31,13 @@ public class ObjectBuilder{
     private final   float[]             _vertexData;
     private final   List<DrawCommand>   _drawList = new ArrayList<DrawCommand>();
     private int                         _offset = 0;
+
+
+    static GenerateData createPoint(Vector vector){
+        ObjectBuilder builder = new ObjectBuilder(1);
+        builder._appendPoint(vector);
+        return builder.build();
+    }
 
     /**
      * 生成射线顶点数据
@@ -102,6 +110,20 @@ public class ObjectBuilder{
         builder._appendOpenCylinder(handleCylinder, numPoints);
 
         return builder.build();
+    }
+
+    private void _appendPoint(Vector vector){
+
+        _vertexData[_offset++] = vector.x;
+        _vertexData[_offset++] = vector.y;
+        _vertexData[_offset++] = vector.z;
+
+        _drawList.add(new DrawCommand() {
+            @Override
+            public void draw() {
+                glDrawArrays(GL_POINTS,0, 1);
+            }
+        });
     }
 
 

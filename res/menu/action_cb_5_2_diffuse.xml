@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_ambient"
+          android:showAsAction="always"
+          android:title="环境光" />
+    <item android:id="@+id/action_direct_diffuse"
+          android:showAsAction="always"
+          android:title="方向光" />
+    <item android:id="@+id/action_point_diffuse"
+          android:showAsAction="always"
+          android:title="点光" />
 
     <item android:id="@+id/action_normal"
           android:showAsAction="always"

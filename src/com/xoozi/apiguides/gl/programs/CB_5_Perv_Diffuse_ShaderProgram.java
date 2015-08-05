@@ -6,6 +6,7 @@ import static android.opengl.GLES30.glGetAttribLocation;
 import static android.opengl.GLES30.glGetUniformLocation;
 import static android.opengl.GLES30.glUniformMatrix4fv;
 import static android.opengl.GLES30.glUniform3f;
+import static android.opengl.GLES30.glUniform1i;
 
 import com.xoozi.apiguides.R;
 
@@ -17,6 +18,8 @@ public class CB_5_Perv_Diffuse_ShaderProgram extends ShaderProgram {
     private static final String U_MATERIAL_AMBIENT      = "u_MaterialAmbient";
     private static final String U_LIGHT_AMBIENT         = "u_LightAmbient";
     private static final String U_LIGHT_VECTOR          = "u_LightVector";
+    private static final String U_LIGHT_MODE            = "u_LightMode";
+    private static final String U_LIGHT_POSITION        = "u_LightPosition";
 
     private static final String A_NORMAL = "a_Normal";
 
@@ -24,6 +27,8 @@ public class CB_5_Perv_Diffuse_ShaderProgram extends ShaderProgram {
     private final int _uMaterialLocation;
     private final int _uLightAmbientLocation;
     private final int _uLightVectorLocation;
+    private final int _uLightModeLocation;
+    private final int _uLightPositionLocation;
 
     private final int _aPositionLocation;
     private final int _aNormalLocation;
@@ -35,6 +40,8 @@ public class CB_5_Perv_Diffuse_ShaderProgram extends ShaderProgram {
         _uMaterialLocation          = glGetUniformLocation(_program, U_MATERIAL_AMBIENT);
         _uLightAmbientLocation      = glGetUniformLocation(_program, U_LIGHT_AMBIENT);
         _uLightVectorLocation       = glGetUniformLocation(_program, U_LIGHT_VECTOR);
+        _uLightModeLocation         = glGetUniformLocation(_program, U_LIGHT_MODE);
+        _uLightPositionLocation     = glGetUniformLocation(_program, U_LIGHT_POSITION);
 
         _aPositionLocation          = glGetAttribLocation(_program, A_POSITION);
         _aNormalLocation            = glGetAttribLocation(_program, A_NORMAL);
@@ -55,6 +62,15 @@ public class CB_5_Perv_Diffuse_ShaderProgram extends ShaderProgram {
     public void setLightVector(float x, float y, float z){
         glUniform3f(_uLightVectorLocation, x, y, z);
     }
+
+    public void setLightPosition(float x, float y, float z){
+        glUniform3f(_uLightPositionLocation, x, y, z);
+    }
+
+    public void setLightMode(int mode){
+        glUniform1i(_uLightModeLocation, mode);
+    }
+
 
     public int getPositionAttributeLocation(){
         return _aPositionLocation;
